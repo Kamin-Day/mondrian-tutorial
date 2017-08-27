@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tutorial - Making A Mondrian Painting Web App</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+
+
+<h1> Making an interactive Mondrian Canvas Web App </h1>
+<h2> (with the option to save and load your artwork)</h2>
+<ul>
+  <li> <strong>Difficulty</strong> - Beginner </li>
+
+</ul>
+<p> In this tutorial I will show you how to make a basic web application running on a Sinatra(Ruby) server. We will be using Ruby (Sinatra Gem), Javascript, and of course, since it is a web application, HTML and CSS.</p>
+
+<img src="/images/mondrian2.png" alt="What we'll be making">
+
+
+<p> If you don't already have Sinatra installed, you can find <a href="http://www.sinatrarb.com"> information on it here</a>.<br>
+
+Or more simply, type this line into your Terminal to begin installation.</p>
+<script src="https://gist.github.com/Kamin-Day/1bbbd372d71369a4fe7ff554f9a9ae5d.js"></script>
+Don't have ruby?
+<script src="https://gist.github.com/Kamin-Day/8ceb17dba97b2e55ea4f13e42a6667ce.js"></script>
+
+<p>Assuming you may already be a little familiar using Javascript, or at least what it can do as a client-side language (where its code is executed in the clients browser 100% locally), you may be wondering why we need to use a server-side language, our Ruby with Sinatra, to complete this little project at all. Simply, the answer is, we don't! However, once we get the canvas up and running using Javascript, we'll be adding some extra functionality to save and load your artworks, and thats where Ruby comes in. We'll be generating a code to represent the color scheme you've made, and sending that to our server to process and store. Similarly, we'll be asking the server to retrieve this information and send it back to the browser to load our paintings 'back to life', but this all comes at the end. Either way, lets get started.</p>
+
+<h2> To begin... </h2>
+<p> Lets start by setting up our work-space. Since we WILL be using ruby before were done, we're going to get everything running on our Sinatra server from the get-go. This way, we won't have to come back to change and rearrange our files when the time comes later.<br><br> Working on a Sinatra server does have some differences than working with just plain HTML, CSS, and JavaScript. For instance, we won't even be using .HTML files. Sinatra using something called a .ERB, or <i><strong>E</strong>mbedded <strong>R</strong>u<strong>b</strong>y document</i>. This works just like a normal .HTML file, but with some added functionality, allowing us to embed bits of Ruby code to run within the page. More on that later</p>
+
+<ol>
+  <li> Create a project folder. I'll call mine "Mondrian", but any name is fine.</li>
+  <li> Inside your project folder, add some folders. "public" and "views". Make sure these are not uppercase.  <i>These folders are very important working with Sinatra. "views" will contain our .erb files, and public will hold some of our other resources, like your CSS and JavaScript files.</i></li>
+  <li>Make a Ruby file - Create a blank text document, save it as "main.rb" - make sure to save this file in your root folder. Mine would be "Mondrian". It should look like this..<script src="https://gist.github.com/Kamin-Day/0fbff7319767de38d8e53dfba0cfeddb.js"></script>
+  Right now, this file won't be doing much. However, we will have to run it to start up our local server. Its main responsibility for now is to display our index.erb. (the get "/" do) part, saying that when "/", or our index is requested in the browser, respond with our index.erb. Lets make that next.</li>
+  <li>Create another blank text file. Call this one index.erb and save it in your "views" folder. We've got some HTML and CSS to get us started, <a href="https://gist.github.com/Kamin-Day/1faab207156c3b6a0d0700c1fc60a62a">so copy and paste this</a> into your .erb</li>
+
+<li>Okay, great. Now your CSS. In another blank file, <a href="https://gist.github.com/Kamin-Day/63697c63cc878e0a1b52d981e1b516dc">copy and paste the this code</a>, then save it as mondrian.css. Its important that you save this into your "public" folder, otherwise it won't be read. 
+
+
+
+
+
+
+</body>
+</html>
