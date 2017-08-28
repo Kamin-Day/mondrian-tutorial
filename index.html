@@ -130,7 +130,41 @@ We'll talk about that in a second, but before we do, we need to create a new fil
 <script src="https://gist.github.com/Kamin-Day/049d2edc46412bac9f17dce33f3738f8.js"></script>
 Now save this file as "imgsaved.erb"<strong>MAKE SURE you save it inside of the "views" folder.</strong> If you put it anywhere else, Sinatra won't be able to find the file and things won't work. We also need one more file, a text file to save our data in. If you cloned my gitRepository earlier, you already have it. If not, make a new text file. Enter the following text, save it as "saves.txt" in your main project folder.
   <script src="https://gist.github.com/Kamin-Day/dbbc5601fee75d56d3a6fda0e004e3cf.js"></script>
-  You don't need the second line, its just there as an example of what our saved artworks will look like in their little data musuem.
+  You don't need the second line, its just there as an example of what our saved artworks will look like in their little data musuem.<br><br>
+
+  Now that everything is set up, lets take a quick look at the code in our "POST" method. It's pretty simple. It gets the data we sent out of the params hash and stores it in a variable, and adds that onto the end of another string containing the current time when the save was being done. This string will look something like the example one in our text file, although the letters may be different. Lastly, it opens our text file, appends a new line to the bottom, which contains the string with just made. A time (some way to identify which save is which), and the data which represents the color scheme.
+</p>
+  <h2> Nice work!</h2>
+ <p> You just created a beautiful work of art, sent some data about it to a server, and saved that information in a file to access at a later point. Pretty cool, huh?</p>
+
+<h2> Loading Images </h2>
+<p>Using a Http Java request to the server, retreiving the data and handling with JavaScript to "load" a previous painting.
+
+<br><br>
+Below is the rest of the code required to load paintings from the server and apply them to your canvas via DOM manipulation. 
+
+<br><br>
+More explination to come!
+<br><br>
+
+
+
+
+
+The Post Method + require relative to load
+  <script src="https://gist.github.com/Kamin-Day/ed39415ec73e5783906123e2f076d1ce.js"></script>
+
+Functions.rb
+<script src="https://gist.github.com/Kamin-Day/8673a0b25499d97296b764778bb80f62.js"></script>
+
+The Java to load
+<script src="https://gist.github.com/Kamin-Day/6c8c6c034984070ec83491ce367dd275.js"></script>
+
+Embedded Ruby in index.erb - calls a function to generate a list of saved images stored on the server and request them.
+<script src="https://gist.github.com/Kamin-Day/bb6e8f7dd0325677fe9a1e6c744972c3.js"></script>
+
+
+
 
 
 
